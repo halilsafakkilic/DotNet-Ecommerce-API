@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "0d0d7315-005a-4df0-aeba-a6b16b59a571",
+		"name": "ECommerceCartAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/product/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"product",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product By SKU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/product/findBySKU/toy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"product",
+								"findBySKU",
+								"toy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Cart List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/cart/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"cart",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Cart Item By SKU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/cart/detail?sku=toy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"cart",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "sku",
+									"value": "toy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add To Cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sku\": \"toy\", \"quantity\": 1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/cart/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"cart",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item By SKU",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/cart/delete?sku=toy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"cart",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "sku",
+									"value": "toy"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
